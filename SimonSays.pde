@@ -8,14 +8,16 @@ void setup() {
   addMove();
   textSize(32);
   textAlign(CENTER);
+  initBackground();
 }
 void draw() {
   //println(cloneSequence);
-  background(255, 100);
+  updateBackground();
+  drawBackground();
   if (gameOver) {
     tlGlow = trGlow = blGlow = brGlow = min(brGlow + 3, 200);
   } else {
-    fill(0);
+    fill(255);
     text("Score: "+score, 64, 32);
     if (!nextMove) {
       buttonEvents();

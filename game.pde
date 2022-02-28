@@ -11,6 +11,8 @@ void addMove() {
   cloneSequence = new ArrayList<Short>(currentSequence);
 }
 void demoSequence() {
+  tlGlow = trGlow = blGlow = brGlow = -200;
+  delay(500);
   while (!demoSequence.isEmpty()) {
     tlGlow = trGlow = blGlow = brGlow = -200;
     delay(100);
