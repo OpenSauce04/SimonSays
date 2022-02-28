@@ -1,4 +1,5 @@
 int boxCount = 250;
+int maxBgBoxTransparency = 20;
 
 class bgBox {
   float xpos, ypos, xvel, yvel, rot, rotvel, size, transparency;
@@ -38,7 +39,10 @@ void updateBackground() {
       bgBoxes.get(i).ypos += bgBoxes.get(i).yvel;
       bgBoxes.get(i).rot += bgBoxes.get(i).rotvel;
       bgBoxes.get(i).transparency += 0.5;
-      bgBoxes.get(i).transparency = min(bgBoxes.get(i).transparency, 20);
+
+      if (bgBoxes.get(i).transparency > maxBgBoxTransparency) { // Fade after restarting the game
+        bgBoxes.get(i).transparency -= 1;
+      }
     }
     
   }

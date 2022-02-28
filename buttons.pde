@@ -1,15 +1,16 @@
 int buttonSize = 325;
 int buttonSpacing = 375;
 int buttonOffset = 100;
-int tlGlow, trGlow, blGlow, brGlow = 0;
+int buttonTransparency = 210;
+float tlGlow, trGlow, blGlow, brGlow = 0;
 void drawButtons() {
-  fill(0+tlGlow,255+tlGlow,0+tlGlow);
+  fill(0+tlGlow, 255+tlGlow, 0+tlGlow, buttonTransparency);
   rect(buttonOffset, buttonOffset, buttonSize, buttonSize); // Top Left
-  fill(255+trGlow, 0+trGlow,0+trGlow);
+  fill(255+trGlow, 0+trGlow, 0+trGlow, buttonTransparency);
   rect(buttonOffset+buttonSpacing, buttonOffset, buttonSize, buttonSize); // Top Right
-  fill(255+blGlow, 255+blGlow, 0+blGlow);
+  fill(255+blGlow, 255+blGlow, 0+blGlow, buttonTransparency);
   rect(buttonOffset, buttonOffset+buttonSpacing, buttonSize, buttonSize); // Bottom Left
-  fill(0+brGlow, 0+brGlow, 255+brGlow);
+  fill(0+brGlow, 0+brGlow, 255+brGlow, buttonTransparency);
   rect(buttonOffset+buttonSpacing, buttonOffset+buttonSpacing, buttonSize, buttonSize); // Bottom Right
 }
 void buttonEvents() {
