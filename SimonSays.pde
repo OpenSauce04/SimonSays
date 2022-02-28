@@ -12,8 +12,12 @@ void draw() {
   background(255, 100);
   if (gameOver) {
     tlGlow = trGlow = blGlow = brGlow = 0;
+    fill(0);
     text("GAME OVER", width/2, height/2);
+    text("Final score: "+score, width/2, 10+height/2);
   } else {
+    fill(0);
+    text("Score: "+score, 10, 10);
     if (!nextMove) {
       buttonEvents();
     }
