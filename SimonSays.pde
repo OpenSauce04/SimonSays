@@ -6,22 +6,26 @@ void setup() {
   stroke(0, 0);
   frameRate(60);
   addMove();
+  textSize(32);
+  textAlign(CENTER);
 }
 void draw() {
   println(cloneSequence);
   background(255, 100);
   if (gameOver) {
-    tlGlow = trGlow = blGlow = brGlow = 0;
-    fill(0);
-    text("GAME OVER", width/2, height/2);
-    text("Final score: "+score, width/2, 10+height/2);
+    tlGlow = trGlow = blGlow = brGlow = min(brGlow + 3, 200);
   } else {
     fill(0);
-    text("Score: "+score, 10, 10);
+    text("Score: "+score, 64, 32);
     if (!nextMove) {
       buttonEvents();
     }
   }
   drawButtons();
+  if (gameOver) {
+    fill(0);
+    text("GAME OVER", width/2, height/2 - 5);
+    text("Final score: "+score, width/2, height/2 + 32-5);
+  }
   mouseReleased = false;
 }

@@ -1,6 +1,9 @@
 boolean nextMove = false;
 boolean gameOver = false;
+int score = -1; // Offset by 1 so that the score starts from 0 when there is 1 move
 void addMove() {
+  score++; // Every time a new move is added, the score is incremented
+  
   currentSequence.add((short)constrain(int(random(0, 5)), 1, 4));
   demoSequence = new ArrayList<Short>(currentSequence);
   nextMove = true;
