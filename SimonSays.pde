@@ -10,7 +10,7 @@ void setup() {
   textAlign(CENTER);
 }
 void draw() {
-  println(cloneSequence);
+  //println(cloneSequence);
   background(255, 100);
   if (gameOver) {
     tlGlow = trGlow = blGlow = brGlow = min(brGlow + 3, 200);
