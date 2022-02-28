@@ -1,4 +1,4 @@
-int boxCount = 400;
+int boxCount = 250;
 
 class bgBox {
   float xpos, ypos, xvel, yvel, rot, rotvel, size, transparency;

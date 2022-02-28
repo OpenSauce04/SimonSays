@@ -15,7 +15,7 @@ void demoSequence() {
   delay(500);
   while (!demoSequence.isEmpty()) {
     tlGlow = trGlow = blGlow = brGlow = -200;
-    delay(100);
+    delay(200);
     switch(demoSequence.get(0)) {
       case 1:
         tlGlow = 0;
@@ -30,9 +30,11 @@ void demoSequence() {
         brGlow = 0;
         break;
     }
-    delay(500);
+    delay(700);
     demoSequence.remove(0);
   }
+  tlGlow = trGlow = blGlow = brGlow = -200;
+  delay(300);
   nextMove = false;
 }
 void checkSequence(int buttonID) {
