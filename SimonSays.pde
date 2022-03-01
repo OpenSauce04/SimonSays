@@ -10,6 +10,8 @@ void setup() {
   textSize(32);
   textAlign(CENTER);
   initBackground();
+  surface.setLocation(500, 50);
+  surface.setTitle("Simon Says");
 }
 
 void draw() {
